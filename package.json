@@ -1,0 +1,10 @@
+{
+  "name": "brute",
+  "version": "1.0.0",
+  "description": "brute-force distributed collaborative prime hunting",
+  "main": "index.js",
+  "repository": "git@github.com:chrisbolin/brute.git",
+  "author": "Chris Bolin <bolin.chris@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
