@@ -63,6 +63,10 @@ Current state of project: ideation.
   - start with 3 and iterate up the list
     - remove every multiple of this number from the list (ideally replace with a null or undefined value)
   - after this has been done for the whole list, filter the list of all null/undefined values and return
+  - performance
+    - tested on Macbook Intel Core i7 2.8 GHz with 16 GB
+    - Chrome finds all primes under 10,000,000 in 100ms using native `Number`
+    - Chrome finds all primes under 10,000,000 in 5000ms using native `BigInt`
       
 ### Language
   - JS
