@@ -67,10 +67,16 @@ Current state of project: ideation.
     - tested on Macbook Intel Core i7 2.8 GHz with 16 GB
     - Chrome finds all primes under 10,000,000 in 100ms using native `Number`
     - Chrome finds all primes under 10,000,000 in 5000ms using native `BigInt`
-      
+- Hybrid
+  - warm up cache: get all primes under a number,
+    probably 1-10 million
+  - progressively build up the cache: use sieve until sqrt(upperSearchLimit) is found
+  - check lowerSearchLimit to upperSearchLimit with 2 to sqrt(upperSearchLimit).
+
 ### Language
   - JS
     - Javascript `BigInt` support is OK, especially for the target audience. Biggest holes: Safari (desktop and mobile), Edge, and IE. [CanIUse BigInt](https://caniuse.com/#search=BigInt)
+      - should _not_ use `BigInt` exclusively, as it is 50x slower than `Number` (see above)
   - Wasm
     - would need a language that can both target WASM _and_ has a BigInt implementation
 
